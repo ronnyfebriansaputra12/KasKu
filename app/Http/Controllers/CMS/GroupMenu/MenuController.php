@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\CMS\GroupMenu;
 
-use App\Models\Transactions;
+use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
-class TransactionsController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class TransactionsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Transactions $transactions)
+    public function show(Menu $menu)
     {
         //
     }
@@ -42,7 +43,7 @@ class TransactionsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Transactions $transactions)
+    public function edit(Menu $menu)
     {
         //
     }
@@ -50,7 +51,7 @@ class TransactionsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Transactions $transactions)
+    public function update(Request $request, Menu $menu)
     {
         //
     }
@@ -58,7 +59,7 @@ class TransactionsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Transactions $transactions)
+    public function destroy(Menu $menu)
     {
         //
     }

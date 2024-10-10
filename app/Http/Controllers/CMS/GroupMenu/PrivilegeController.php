@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\CMS\GroupMenu;
 
-use App\Models\Savings;
+use App\Http\Controllers\Controller;
+use App\Models\Privilege;
 use Illuminate\Http\Request;
 
-class SavingsController extends Controller
+class PrivilegeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class SavingsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Savings $savings)
+    public function show(Privilege $privilege)
     {
         //
     }
@@ -42,7 +43,7 @@ class SavingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Savings $savings)
+    public function edit(Privilege $privilege)
     {
         //
     }
@@ -50,7 +51,7 @@ class SavingsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Savings $savings)
+    public function update(Request $request, Privilege $privilege)
     {
         //
     }
@@ -58,7 +59,7 @@ class SavingsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Savings $savings)
+    public function destroy(Privilege $privilege)
     {
         //
     }

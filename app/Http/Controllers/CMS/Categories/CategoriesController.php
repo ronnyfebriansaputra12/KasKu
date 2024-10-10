@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\CMS\Categories;
 
-use App\Models\Budgets;
+use App\Http\Controllers\Controller;
+use App\Models\Categories;
 use Illuminate\Http\Request;
 
-class BudgetsController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class BudgetsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Budgets $budgets)
+    public function show(Categories $categories)
     {
         //
     }
@@ -42,7 +43,7 @@ class BudgetsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Budgets $budgets)
+    public function edit(Categories $categories)
     {
         //
     }
@@ -50,7 +51,7 @@ class BudgetsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Budgets $budgets)
+    public function update(Request $request, Categories $categories)
     {
         //
     }
@@ -58,7 +59,7 @@ class BudgetsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Budgets $budgets)
+    public function destroy(Categories $categories)
     {
         //
     }

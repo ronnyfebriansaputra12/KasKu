@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>@yield('titl')</title>
+    <title>@yield('title')</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/simplebar.css') }}">
     <!-- Fonts CSS -->
@@ -27,6 +27,9 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/app-light.css') }}" id="lightTheme" disabled>
     <link rel="stylesheet" href="{{ asset('assets/css/app-dark.css') }}" id="darkTheme">
+    <link rel="stylesheet" href="{{ asset('assets/css/dataTables.bootstrap4.css') }}">
+
+    @stack('styles')
 
 </head>
 
@@ -37,6 +40,8 @@
 
         <main role="main" class="main-content">
             @yield('main-content')
+            @include('layouts.be_notif')
+
         </main> <!-- main -->
     </div> <!-- .wrapper -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
@@ -71,6 +76,12 @@
     <script src="{{ asset('assets/js/dropzone.min.js') }}"></script>
     <script src="{{ asset('assets/js/uppy.min.js') }}"></script>
     <script src="{{ asset('assets/js/quill.min.js') }}"></script>
+    <script src='{{ asset('assets/js/jquery.dataTables.min.js') }}'></script>
+    <script src='{{ asset('assets/js/dataTables.bootstrap4.min.js') }}'></script>
+    <script src='{{ asset('assets/js/blockui.min.js') }}'></script>
+	<script src="{{ asset('assets/js/pace.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('assets/js/uniform.min.js') }}"></script>
 
     <script>
         $('.select2').select2({
@@ -255,7 +266,11 @@
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
     </script>
-	@stack('script-append')
+    <script>
+        var _baseURL = "<?php echo url(''); ?>",
+            _assetURL = "{{ asset('') }}";
+    </script>
+    @stack('script-append')
 </body>
 
 </html>
